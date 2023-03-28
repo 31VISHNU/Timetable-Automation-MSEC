@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+@model TTGenerator.Models.Domain.Faculty_details
+<html>
+<style>
+    .centre {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+    }
+</style>
+<body>
+    @using (Html.BeginForm("Faculty_details", "Home", FormMethod.Post))
+    {<div class="centre">
+        <label>
+            Sno.<input type="text" asp-for="Sno" />
+        </label>
+        <label>
+            Select Staff ID
+            <select id="staffi" asp-for="Staff_id">
+                <option value="19AIDT001">19AIDT001</option>
+                <option value="19AIDT002">19AIDT002</option>
+                <option value="19AIDT003">19AIDT003</option>
+                <option value="19AIDT004">19AIDT004</option>
+                <option value="19AIDT005">19AIDT005</option>
+                <option value="19AIDT006">19AIDT006</option>
+            </select>
+        </label>
+        <label>
+            Select Staff Name
+            <select id="staffn" asp-for="Staff_Name">
+                <option value="ajs">Dr.J.Angela Jennifa Sujana</option>
+                <option value="pt">Dr.P.Thendral</option>
+                <option value="asr">Dr.A.Shenbagarajan</option>
+                <option value="ps">Mrs.P.Swathika</option>
+                <option value="lp">Ms.L.Prasika</option>
+                <option value="am">Mrs.A.Muthulakshmi</option>
+            </select>
+        </label>
+        <label>
+            Select Course ID:
+            <select id="coursei" asp-for="Course_id">
+                <option value="dl">19AID601</option>
+                <option value="fsd">19AID602</option>
+                <option value="se">19AID603</option>
+                <option value="rc">19AIDC604</option>
+                <option value="sdn">19AIDC605</option>
+                <option value="tableau">19AIDP606</option>
+                <option value="dist">19AIDP607</option>
+                <option value="bigdata">19AIDP608</option>
+                <option value="nlp">19AIDFT610</option>
+            </select>
+        </label>
+        <label>
+            Select No. of periods:
+            <select id="Totalclasses" asp-for="Total_classes">
+                <option value="1p">1</option>
+                <option value="2p">2</option>
+                <option value="3p">3</option>
+                <option value="4p">4</option>
+                <option value="5p">5</option>
+            </select>
+        </label>
+    </div>
+    <input type="submit" />
+    }
+</body>
+</html>

@@ -1,0 +1,547 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model TTGenerator.Models.Index1
+<html>
+<style>
+    table, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    .centre {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+    }
+</style>
+<body>
+    @using (Html.BeginForm("Index1", "Home", FormMethod.Post))
+    {
+    <div class="centre">
+        <label>
+            Select Year
+            <select id="year" asp-for="year_s">
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>
+                <option value="IV">IV</option>
+            </select>
+        </label>
+        <label>
+            Semester_id
+            <select id="semester" asp-for="semester_id">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+            </select>
+        </label>
+        <label>
+            Batch start year
+            <input type="number" id="batch_start_year" asp-for="batch_start_year" />
+        </label>
+    </div>
+    <table border="1" class="center">
+        <tr>
+            <td align="center">
+            <td>9:00-9:50
+            <td>9:50-10:40
+            <td>10:40-11:00
+            <td>11:00-11:50
+            <td>11:50-12:40
+            <td>12:40-1:30
+            <td>1:30-2:15
+            <td>2:15-3:00
+            <td>3:00-3:15
+            <td>3:15-4:00
+            <td>4:00-4:45
+            <td>4:50-5:30
+            <td>5:30-6:15
+        </tr>
+        <tr>
+            <td align="center">MONDAY
+            <td align="center">
+                <select id="m1" asp-for="m1">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="m2" asp-for="m2">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td rowspan="6" align="center">B<br>R<br>E<br>A<br>K
+            <td align="center">
+                <select id="m3" asp-for="m3">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="m4" asp-for="m4">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td rowspan="6" align="center">L<br>U<br>N<br>C<br>H
+            <td align="center">
+                <select id="m5" asp-for="m5">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="m6" asp-for="m6">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td rowspan="6" align="center">B<br>R<br>E<br>A<br>K
+            <td align="center">
+                <select id="m7" asp-for="m7">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="m8" asp-for="m8">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+            <td align="center">
+                <select id="m9" asp-for="m9">
+                    <option value=1>NIL</option>
+                    <option value=4>FT</option>
+                    <option value=5>Hons.</option>
+                </select>
+            <td align="center">
+                <select id="m10" asp-for="m10">
+                    <option value=1>NIL</option>
+                    <option value=4>FT</option>
+                    <option value=5>Hons.</option>
+                </select>
+        </tr>
+        <tr>
+            <td align="center">TUESDAY
+            <td align="center">
+                <select id="t1" asp-for="t1">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="t2" asp-for="t2">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="t3" asp-for="t3">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="t4" asp-for="t4">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="t5" asp-for="t5">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="t6" asp-for="t6">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="t7" asp-for="t7">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="t8" asp-for="t8">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+            <td align="center">
+                <select id="t9" asp-for="t9">
+                    <option value=1>NIL</option>
+                    <option value=4>FT</option>
+                    <option value=5>Hons.</option>
+                </select>
+            <td align="center">
+                <select id="t10" asp-for="t10">
+                    <option value=1>NIL</option>
+                    <option value=4>FT</option>
+                    <option value=5>Hons.</option>
+                </select>
+        </tr>
+        <tr>
+            <td align="center">WEDNESDAY
+            <td align="center">
+                <select id="w1" asp-for="w1">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="w2" asp-for="w2">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="w3" asp-for="w3">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="w4" asp-for="w4">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="w5" asp-for="w5">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="w6" asp-for="w6">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="w7" asp-for="w7">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="w8" asp-for="w8">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+            <td align="center">
+                <select id="w9" asp-for="w9">
+                    <option value=1>NIL</option>
+                    <option value=4>FT</option>
+                    <option value=5>Hons.</option>
+                </select>
+            <td align="center">
+                <select id="w10" asp-for="w10">
+                    <option value=1>NIL</option>
+                    <option value=4>FT</option>
+                    <option value=5>Hons.</option>
+                </select>
+        </tr>
+        <tr>
+            <td align="center">THURSDAY
+            <td align="center">
+                <select id="th1" asp-for="th1">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="th2" asp-for="th2">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="th3" asp-for="th3">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="th4" asp-for="th4">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="th5" asp-for="th5">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="th6" asp-for="th6">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="th7" asp-for="th7">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="th8" asp-for="th8">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+            <td align="center">
+                <select id="th9" asp-for="th9">
+                    <option value=1>NIL</option>
+                    <option value=4>FT</option>
+                    <option value=5>Hons.</option>
+                </select>
+            <td align="center">
+                <select id="th10" asp-for="th10">
+                    <option value=1>NIL</option>
+                    <option value=4>FT</option>
+                    <option value=5>Hons.</option>
+                </select>
+        </tr>
+        <tr>
+            <td align="center">FRIDAY
+            <td align="center">
+                <select id="f1" asp-for="f1">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="f2" asp-for="f2">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="f3" asp-for="f3">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="f4" asp-for="f4">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="f5" asp-for="f5">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="f6" asp-for="f6">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="f7" asp-for="f7">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="f8" asp-for="f8">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+            <td align="center">
+                <select id="f9" asp-for="f9">
+                    <option value=1>NIL</option>
+                    <option value=4>FT</option>
+                    <option value=5>Hons.</option>
+                </select>
+            <td align="center">
+                <select id="f10" asp-for="f10">
+                    <option value=1>NIL</option>
+                    <option value=4>FT</option>
+                    <option value=5>Hons.</option>
+                </select>
+        </tr>
+        <tr>
+            <td align="center">SATURDAY
+            <td align="center">
+                <select id="s1" asp-for="s1">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="s2" asp-for="s2">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="s3" asp-for="s3">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="s4" asp-for="s4">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="s5" asp-for="s5">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="s6" asp-for="s6">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="s7" asp-for="s7">
+                    <option value=1>NIL</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=6>AE</option>
+                </select>
+                <br>
+            <td align="center">
+                <select id="s8" asp-for="s8">
+                    <option value=6>AE</option>
+                    <option value=2>OE</option>
+                    <option value=3>PET</option>
+                    <option value=7>Club</option>
+                </select>
+            <td align="center">
+                <select id="s9" asp-for="s9">
+                    <option value=1>NIL</option>
+                    <option value=4>FT</option>
+                    <option value=5>Hons.</option>
+                </select>
+            <td align="center">
+                <select id="s10" asp-for="s10">
+                    <option value=1>NIL</option>
+                    <option value=4>FT</option>
+                    <option value=5>Hons.</option>
+                </select>
+    </table>
+    <input type="submit" />
+
+    }
+</body>
+</html>
