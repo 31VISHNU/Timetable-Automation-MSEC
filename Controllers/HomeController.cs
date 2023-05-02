@@ -24,7 +24,15 @@ namespace TTGenerator.Controllers
         {
             return View();
         }
+        public IActionResult Index2()
+        {
+            return View();
+        }
         public IActionResult Faculty_details()
+        {
+            return View();
+        }
+        public IActionResult viewtt()
         {
             return View();
         }
@@ -38,11 +46,1117 @@ namespace TTGenerator.Controllers
                 Staff_id=d.Staff_id, 
                 Course_id=d.Course_id, 
                 Staff_Name=d.Staff_Name,
-                Total_classes=d.Total_classes
+                Total_classes=d.Total_classes,
+                section=d.section,
+                Class_year=d.Class_year
             };
             mvcDemoDbContext.Faculty_details.Add(dept);
             mvcDemoDbContext.SaveChanges();
             return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Index2(Index2 indexn)
+        {
+            Console.WriteLine("indexn.semester_id");
+            Console.WriteLine(indexn.semester_id);
+            Console.WriteLine(indexn.m10);
+            Console.WriteLine(indexn.m1);
+            //    var c =  mvcDemoDbContext.dCoordinator.Count();
+
+
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if ((i == 0) && (j == 0))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 1,
+                            day_tt = "monday",
+                            elective_id = indexn.m1
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 0) && (j == 1))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 2,
+                            day_tt = "monday",
+                            elective_id = indexn.m2
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 0) && (j == 2))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 3,
+                            day_tt = "monday",
+                            elective_id = indexn.m3
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 0) && (j == 3))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 4,
+                            day_tt = "monday",
+                            elective_id = indexn.m4
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 0) && (j == 4))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 5,
+                            day_tt = "monday",
+                            elective_id = indexn.m5
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 0) && (j == 5))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 6,
+                            day_tt = "monday",
+                            elective_id = indexn.m6
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 0) && (j == 6))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 7,
+                            day_tt = "monday",
+                            elective_id = indexn.m7
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 0) && (j == 7))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 8,
+                            day_tt = "monday",
+                            elective_id = indexn.m8
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 0) && (j == 8))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 9,
+                            day_tt = "monday",
+                            elective_id = indexn.m9
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 0) && (j == 9))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 10,
+                            day_tt = "monday",
+                            elective_id = indexn.m10
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 1) && (j == 0))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 1,
+                            day_tt = "tuesday",
+                            elective_id = indexn.t1
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 1) && (j == 1))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 2,
+                            day_tt = "tuesday",
+                            elective_id = indexn.t2
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 1) && (j == 2))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 3,
+                            day_tt = "tuesday",
+                            elective_id = indexn.t3
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 1) && (j == 3))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 4,
+                            day_tt = "tuesday",
+                            elective_id = indexn.t4
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 1) && (j == 4))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 5,
+                            day_tt = "tuesday",
+                            elective_id = indexn.t5
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 1) && (j == 5))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 6,
+                            day_tt = "tuesday",
+                            elective_id = indexn.t6
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 1) && (j == 6))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 7,
+                            day_tt = "tuesday",
+                            elective_id = indexn.t7
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 1) && (j == 7))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 8,
+                            day_tt = "tuesday",
+                            elective_id = indexn.t8
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 1) && (j == 8))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 9,
+                            day_tt = "tuesday",
+                            elective_id = indexn.t9
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 1) && (j == 9))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 10,
+                            day_tt = "tuesday",
+                            elective_id = indexn.t10
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 2) && (j == 0))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 1,
+                            day_tt = "wednesday",
+                            elective_id = indexn.w1
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 2) && (j == 1))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 2,
+                            day_tt = "wednesday",
+                            elective_id = indexn.w2
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 2) && (j == 2))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 3,
+                            day_tt = "wednesday",
+                            elective_id = indexn.w3
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 2) && (j == 3))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 4,
+                            day_tt = "wednesday",
+                            elective_id = indexn.w4
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 2) && (j == 4))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 5,
+                            day_tt = "wednesday",
+                            elective_id = indexn.w5
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 2) && (j == 5))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 6,
+                            day_tt = "wednesday",
+                            elective_id = indexn.w6
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 2) && (j == 6))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 7,
+                            day_tt = "wednesday",
+                            elective_id = indexn.w7
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 2) && (j == 7))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 8,
+                            day_tt = "wednesday",
+                            elective_id = indexn.w8
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 2) && (j == 8))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 9,
+                            day_tt = "wednesday",
+                            elective_id = indexn.w9
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 2) && (j == 9))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 10,
+                            day_tt = "wednesday",
+                            elective_id = indexn.w10
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 3) && (j == 0))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 1,
+                            day_tt = "thursday",
+                            elective_id = indexn.th1
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 3) && (j == 1))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 2,
+                            day_tt = "thursday",
+                            elective_id = indexn.th2
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 3) && (j == 2))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 3,
+                            day_tt = "thursday",
+                            elective_id = indexn.th3
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 3) && (j == 3))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 4,
+                            day_tt = "thursday",
+                            elective_id = indexn.th4
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 3) && (j == 4))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 5,
+                            day_tt = "thursday",
+                            elective_id = indexn.th5
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 3) && (j == 5))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 6,
+                            day_tt = "thursday",
+                            elective_id = indexn.th6
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 3) && (j == 6))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 7,
+                            day_tt = "thursday",
+                            elective_id = indexn.th7
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 3) && (j == 7))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 8,
+                            day_tt = "thursday",
+                            elective_id = indexn.th8
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 3) && (j == 8))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 9,
+                            day_tt = "thursday",
+                            elective_id = indexn.th9
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 3) && (j == 9))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 10,
+                            day_tt = "thursday",
+                            elective_id = indexn.th10
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 4) && (j == 0))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 1,
+                            day_tt = "friday",
+                            elective_id = indexn.f1
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 4) && (j == 1))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 2,
+                            day_tt = "friday",
+                            elective_id = indexn.f2
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 4) && (j == 2))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 3,
+                            day_tt = "friday",
+                            elective_id = indexn.f3
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 4) && (j == 3))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 4,
+                            day_tt = "friday",
+                            elective_id = indexn.f4
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 4) && (j == 4))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 5,
+                            day_tt = "friday",
+                            elective_id = indexn.f5
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 4) && (j == 5))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 6,
+                            day_tt = "friday",
+                            elective_id = indexn.f6
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 4) && (j == 6))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 7,
+                            day_tt = "friday",
+                            elective_id = indexn.f7
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 4) && (j == 7))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 8,
+                            day_tt = "friday",
+                            elective_id = indexn.f8
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 4) && (j == 8))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 9,
+                            day_tt = "friday",
+                            elective_id = indexn.f9
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 4) && (j == 9))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 10,
+                            day_tt = "friday",
+                            elective_id = indexn.f10
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 5) && (j == 0))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 1,
+                            day_tt = "saturday",
+                            elective_id = indexn.s1
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 5) && (j == 1))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 2,
+                            day_tt = "saturday",
+                            elective_id = indexn.s2
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 5) && (j == 2))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 3,
+                            day_tt = "saturday",
+                            elective_id = indexn.s3
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 5) && (j == 3))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 4,
+                            day_tt = "saturday",
+                            elective_id = indexn.s4
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 5) && (j == 4))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 5,
+                            day_tt = "saturday",
+                            elective_id = indexn.s5
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 5) && (j == 5))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 6,
+                            day_tt = "saturday",
+                            elective_id = indexn.s6
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 5) && (j == 6))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 7,
+                            day_tt = "saturday",
+                            elective_id = indexn.s7
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 5) && (j == 7))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 8,
+                            day_tt = "saturday",
+                            elective_id = indexn.s8
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 5) && (j == 8))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 9,
+                            day_tt = "saturday",
+                            elective_id = indexn.s9
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else if ((i == 5) && (j == 8))
+                    {
+                        int c = mvcDemoDbContext.dCoordinator.Count();
+                        Console.WriteLine(c);
+                        dCoordinator clg = new dCoordinator
+                        {
+                            sno = c + 1,
+                            semester_id = indexn.semester_id,
+                            batch_start_year = indexn.batch_start_year,
+                            year_s = indexn.year_s,
+                            slot = 10,
+                            day_tt = "saturday",
+                            elective_id = indexn.s10
+                        };
+                        mvcDemoDbContext.dCoordinator.Add(clg);
+                        mvcDemoDbContext.SaveChanges();
+
+                    }
+                    else
+                    {
+                        break;
+                    }
+
+                }
+            }
+            return View();
+
         }
         [HttpPost]
         public async Task<IActionResult> Index1(Index1 index)
@@ -1178,7 +2292,22 @@ namespace TTGenerator.Controllers
                 {
                     Console.WriteLine(login);
                     Console.WriteLine(login.password_l);
+                    Console.WriteLine("Vishnusankar");
                     return RedirectToAction("Faculty_details");
+                }
+                if (loginrequest.password_l == "xyz")
+                {
+                    Console.WriteLine(login);
+                    Console.WriteLine(login.password_l);
+                    Console.WriteLine("Vishnusankar");
+                    return RedirectToAction("Index2");
+                }
+                if (loginrequest.password_l == "v")
+                {
+                    Console.WriteLine(login);
+                    Console.WriteLine(login.password_l);
+                    Console.WriteLine("Vishnusankar");
+                    return RedirectToAction("viewtt");
                 }
             }
             return RedirectToAction("Error");
@@ -1194,5 +2323,55 @@ namespace TTGenerator.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        /*
+        public IActionResult Add_faculty()
+        {
+            Console.WriteLine(_Myglobalfid);
+            var fac = mvcDemoDbContext.Faculty_info.FromSqlRaw($"select * from [Faculty_info] where  faculty_id ='{_Myglobalfid}'").ToList();
+            Console.WriteLine(fac[0].faculty_dept);
+            var fac2 = mvcDemoDbContext.Faculty_info.FromSqlRaw($"select * from [Faculty_info] where  faculty_dept ='{fac[0].faculty_dept}'").ToList();
+            var cd1 = mvcDemoDbContext.Course_info.FromSqlRaw($"select * from [Course_info] where  Department ='{fac[0].faculty_dept}'").ToList();
+            Console.WriteLine(fac2.Count);
+            List<SelectListItem> faculty_name_id = new List<SelectListItem>();
+            List<SelectListItem> course_name_id = new List<SelectListItem>();
+            af.FacultyCollection = new List<Faculty>();
+            af.CourseCollection = new List<Course>();
+
+            for (int i = 0; i < fac2.Count; i++)
+            {
+                faculty_name_id.Add(new SelectListItem() { Text = fac2[i].faculty_name, Value = fac2[i].faculty_id });
+                af.FacultyCollection.Add(new Faculty() { Faculty_Id = fac2[i].faculty_id, Faculty_Name = fac2[i].faculty_name });
+
+
+            }
+            for (int i = 0; i < cd1.Count; i++)
+            {
+                course_name_id.Add(new SelectListItem() { Text = cd1[i].Course_name, Value = cd1[i].Course_id });
+                af.CourseCollection.Add(new Course() { Course_Id = cd1[i].Course_id, Course_Name = cd1[i].Course_name });
+            }
+
+            ViewData["fni"] = faculty_name_id;
+            ViewData["cni"] = course_name_id;
+            ViewBag.facname = faculty_name_id;
+            ViewBag.course = course_name_id;
+            return View(af);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Add_faculty(Add_faculty add_faculty)
+        {
+            Console.WriteLine(add_faculty.Faculty_id);
+            allot_faculty allotfac = new allot_faculty
+            {
+                Faculty_id = add_faculty.Faculty_id,
+                Course_id = add_faculty.Course_id,
+                S_year = add_faculty.Year,
+                Batch = add_faculty.Batch,
+                Section = add_faculty.section,
+                Semester = add_faculty.Semester
+            };
+            mvcDemoDbContext.Add_faculty.Add(allotfac);
+            mvcDemoDbContext.SaveChanges();
+            return RedirectToAction("Add_faculty");
+        }*/
     }
 }
