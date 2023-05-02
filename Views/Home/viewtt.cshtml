@@ -1,0 +1,26 @@
+﻿@using System.Data;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+@model TTGenerator.Models.Login
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>ps</th>
+        </tr>
+        @foreach (var row in Models.Login)
+        {
+        <tr>
+            <td>@row["login_id"]</td>
+            <td>@row["password_l"]</td>
+        </tr>
+        }
+    </table>
+</body>
+</html>

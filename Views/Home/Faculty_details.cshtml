@@ -12,11 +12,11 @@
     @using (Html.BeginForm("Faculty_details", "Home", FormMethod.Post))
     {<div class="centre">
         <label>
-            Sno.<input type="text" asp-for="Sno" />
+            Sno.<input type="number" asp-for="Sno" />
         </label>
         <label>
             Select Staff ID
-            <select id="staffi" asp-for="Staff_id">
+            <select id="Staff_id" asp-for="Staff_id">
                 <option value="19AIDT001">19AIDT001</option>
                 <option value="19AIDT002">19AIDT002</option>
                 <option value="19AIDT003">19AIDT003</option>
@@ -27,41 +27,58 @@
         </label>
         <label>
             Select Staff Name
-            <select id="staffn" asp-for="Staff_Name">
-                <option value="ajs">Dr.J.Angela Jennifa Sujana</option>
-                <option value="pt">Dr.P.Thendral</option>
-                <option value="asr">Dr.A.Shenbagarajan</option>
-                <option value="ps">Mrs.P.Swathika</option>
-                <option value="lp">Ms.L.Prasika</option>
-                <option value="am">Mrs.A.Muthulakshmi</option>
+            <select id="Staff_Name" asp-for="Staff_Name">
+                <option value="Dr.J.Angela Jennifa Sujana">Dr.J.Angela Jennifa Sujana</option>
+                <option value="Dr.P.Thendral">Dr.P.Thendral</option>
+                <option value="Dr.A.Shenbagarajan">Dr.A.Shenbagarajan</option>
+                <option value="Mrs.P.Swathika">Mrs.P.Swathika</option>
+                <option value="Ms.L.Prasika">Ms.L.Prasika</option>
+                <option value="Mrs.A.Muthulakshmi">Mrs.A.Muthulakshmi</option>
             </select>
         </label>
         <label>
             Select Course ID:
-            <select id="coursei" asp-for="Course_id">
-                <option value="dl">19AID601</option>
-                <option value="fsd">19AID602</option>
-                <option value="se">19AID603</option>
-                <option value="rc">19AIDC604</option>
-                <option value="sdn">19AIDC605</option>
-                <option value="tableau">19AIDP606</option>
-                <option value="dist">19AIDP607</option>
-                <option value="bigdata">19AIDP608</option>
-                <option value="nlp">19AIDFT610</option>
+            <select id="Course_id" asp-for="Course_id">
+                <option value="19AID601">19AID601</option>
+                <option value="19AID602">19AID602</option>
+                <option value="19AID603">19AID603</option>
+                <option value="19AIDC604">19AIDC604</option>
+                <option value="19AIDC605">19AIDC605</option>
+                <option value="19AIDP606">19AIDP606</option>
+                <option value="19AIDP607">19AIDP607</option>
+                <option value="19AIDP608">19AIDP608</option>
+                <option value="19AIDFT610">19AIDFT610</option>
             </select>
         </label>
         <label>
             Select No. of periods:
-            <select id="Totalclasses" asp-for="Total_classes">
-                <option value="1p">1</option>
-                <option value="2p">2</option>
-                <option value="3p">3</option>
-                <option value="4p">4</option>
-                <option value="5p">5</option>
+            <select id="Total_classes" asp-for="Total_classes">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </label>
+        <label>
+            Select Section
+            <select id="section" asp-for="section">
+                <option value="a">A</option>
+                <option value="b">B</option>
+                <option value="c">C</option>
+            </select>
+        </label>
+        <label>
+            Select Class_year
+            <select id="Class_year" asp-for="Class_year">
+                <option value=2>II</option>
+                <option value=3>III</option>
+                <option value=4>IV</option>
             </select>
         </label>
     </div>
     <input type="submit" />
     }
+
 </body>
 </html>
