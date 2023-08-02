@@ -1,11 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
-namespace TTGenerator.Models
+﻿namespace TTGenerator.Models
 {
     public class Faculty
     {
-        [Key]
-        public string Faculty_id { get; set; }
-        public string Faculty_name { get; set; }
+        public string Faculty_Id { get; set; }
+        public string Faculty_Name { get; set; }
     }
 }

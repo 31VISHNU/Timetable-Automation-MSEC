@@ -1,16 +1,25 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿//using MessagePack;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace TTGenerator.Models.Domain
 {
-    public class Faculty_details
+    public partial class Faculty_details
     {
-        [Key]
-        public int Sno { get; set; }    
-        public string Staff_id { get; set; }
-        public string Course_id { get; set; }
-        public string Staff_Name { get; set; }
-        public int Total_classes { get; set; }
-        public string section {get; set; }
-        public int Class_year { get; set; }
+       
+       [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key] public string faculty_id { get; set; }
+      // public string faculty_id { get; set; }
+       public string faculty_name { get;set; }
+       public int faculty_phno { get; set; }   
+       public string faculty_email {get; set; }
+       public DateTime faculty_dob { get; set; }
+       public string faculty_address_dno { get; set; }
+       public string faculty_address_place { get; set; }
+       public string faculty_address_pincode { get; set; }
+       public string faculty_dept { get; set; }
+
+
+        
     }
 }
